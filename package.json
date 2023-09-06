@@ -1,0 +1,25 @@
+{
+  "name": "aims-backend",
+  "version": "1.0.0",
+  "description": "aims portal for project phase VII sem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ram-Ratan/aims-backend.git"
+  },
+  "author": "Ram Ratan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ram-Ratan/aims-backend/issues"
+  },
+  "homepage": "https://github.com/Ram-Ratan/aims-backend#readme",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
