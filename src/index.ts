@@ -1,8 +1,8 @@
 import { configDotenv } from "dotenv";
 import express from "express";
 import mongoose, { mongo } from "mongoose";
-import { user } from "../model/user";
-import userServiceRouter from "../router/user";
+import { user } from "./model/user";
+import userServiceRouter from "./router/user";
 
 configDotenv();
 const app = express();
