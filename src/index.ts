@@ -8,7 +8,14 @@ configDotenv();
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URL || "myurl");
+app.use(express.json());
+
+mongoose.connect(process.env.MONGODB_URL || "myurl").then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('MongoDB connection error:', error);
+  });;
 
 app.use("/api/user", userServiceRouter);
 
