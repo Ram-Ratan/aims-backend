@@ -20,9 +20,9 @@ export const getUsers = async (req: Request, res: Response) => {
 export const createUser = async (req: any, res: any) => {
     try {
         console.log(`SIGNUP USER STARTED`);
-        const { name, email, password, isAdmin } = req.body;
+        const { name, email, password, isAdmin , isFaculty, isStudent} = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
-        const userInfo = new user({name, email, password: hashedPassword, isAdmin});
+        const userInfo = new user({name, email, password: hashedPassword, isAdmin, isFaculty, isStudent});
         const response = await userInfo.save();
         res.status(201);
         console.log(`SIGNUP USER SUCCESSFUL - ${response}`);
