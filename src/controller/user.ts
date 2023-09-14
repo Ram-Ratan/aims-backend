@@ -17,7 +17,7 @@ export const getUsers = async (req: Request, res: Response) => {
     }
 }
 
-export const createUser = async (req: any, res: any) => {
+export const signup = async (req: any, res: any) => {
     try {
         console.log(`SIGNUP USER STARTED`);
         const { name, email, password, isAdmin , isFaculty, isStudent} = req.body;
