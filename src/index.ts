@@ -1,10 +1,11 @@
 import { configDotenv } from "dotenv";
 import express from "express";
 import mongoose, { mongo } from "mongoose";
-import { user } from "./model/user";
 import userServiceRouter from "./router/user";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import utilServiceRouter from "./router/utils";
+import courseServiceRouter from "./router/course";
 
 configDotenv();
 const app = express();
@@ -25,6 +26,8 @@ mongoose.connect(process.env.MONGODB_URL || "myurl").then(() => {
   });;
 
 app.use("/api/user", userServiceRouter);
+app.use("/api/utils", utilServiceRouter);
+app.use("/api/course", courseServiceRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
