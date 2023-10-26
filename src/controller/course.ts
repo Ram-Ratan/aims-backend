@@ -45,8 +45,8 @@ export const createCourse =async (req:Request, res: Response) => {
 
 export const courseRegistration =async (req:Request, res: Response) => {
     try {
+        console.log(`COURSE RESGISTRATION Query Started`);
         const body = req.body;
-        const response = new studentCourse({ body });
         const registrationData = await studentCourse.create(body);
         res.status(201);
         console.log(`COURSE REGISTRATION- SUCCESSFULL -> ${registrationData}`);
