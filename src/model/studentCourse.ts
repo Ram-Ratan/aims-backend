@@ -11,6 +11,16 @@ const studentCourseSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         ref: 'Course',
         required: true
+    },
+    branch: {
+        type: Schema.Types.ObjectId,
+        ref: 'Branch', 
+        required: true
+    },
+    semester: {
+        type: Schema.Types.ObjectId,
+        ref: 'Semester', 
+        required: true
     }
 });
 
